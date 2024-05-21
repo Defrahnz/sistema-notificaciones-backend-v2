@@ -1,10 +1,10 @@
-package com.sistema.notificaciones.backend.sistemanotificaciones;
+package com.sistema.notificaciones.backend.sistemanotificacionesbackend;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SistemaNotificacionesApplicationTests {
+class SistemaNotificacionesBackendApplicationTests {
 
 	@Test
 	void contextLoads() {

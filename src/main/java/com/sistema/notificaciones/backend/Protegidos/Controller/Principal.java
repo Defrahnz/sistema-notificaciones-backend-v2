@@ -15,5 +15,10 @@ public class Principal {
     public String bienvenida() {
         return "Bienvenida al api";
     }
+    
+    @PostMapping(value="register")
+    public String register() {        
+        return "Esto es un registro";
+    }
 
 }

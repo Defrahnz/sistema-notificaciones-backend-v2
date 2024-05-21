@@ -16,11 +16,4 @@ public class AuthController {
         return "Esto es un login";
     }
 
-    @PostMapping(value="register")
-    public String register() {        
-        return "Esto es un registro";
-    }
-    
-    
-
 }

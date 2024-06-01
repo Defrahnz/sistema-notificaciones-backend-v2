@@ -1,4 +1,4 @@
-package com.sistema.notificaciones.backend.Protegidos.Request;
+package com.sistema.notificaciones.backend.Usuario;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

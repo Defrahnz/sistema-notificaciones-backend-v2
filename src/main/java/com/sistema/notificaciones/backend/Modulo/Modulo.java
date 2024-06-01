@@ -1,4 +1,4 @@
-package com.sistema.notificaciones.backend.Protegidos.Model;
+package com.sistema.notificaciones.backend.Modulo;
 
 import java.util.ArrayList;
 import java.util.List;

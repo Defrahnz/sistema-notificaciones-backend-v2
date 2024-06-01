@@ -1,4 +1,4 @@
-package com.sistema.notificaciones.backend.Response;
+package com.sistema.notificaciones.backend.Auth;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -9,6 +9,8 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class AuthResponse {
-    String token;
+public class LoginRequest {
+    String username;
+    String password;
+
 }

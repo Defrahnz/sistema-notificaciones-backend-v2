@@ -1,9 +1,5 @@
-package com.sistema.notificaciones.backend.Controller;
+package com.sistema.notificaciones.backend.Auth;
 
-import com.sistema.notificaciones.backend.Protegidos.Request.RegistroRequest;
-import com.sistema.notificaciones.backend.Request.LoginRequest;
-import com.sistema.notificaciones.backend.Response.AuthResponse;
-import com.sistema.notificaciones.backend.Service.AuthService;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;

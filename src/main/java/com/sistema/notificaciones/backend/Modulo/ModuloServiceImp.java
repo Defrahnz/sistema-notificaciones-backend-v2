@@ -1,11 +1,9 @@
-package com.sistema.notificaciones.backend.Protegidos.Service;
+package com.sistema.notificaciones.backend.Modulo;
 
 import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import com.sistema.notificaciones.backend.Protegidos.Model.Modulo;
-import com.sistema.notificaciones.backend.Protegidos.Repository.ModuloRepository;
 
 import lombok.RequiredArgsConstructor;
 

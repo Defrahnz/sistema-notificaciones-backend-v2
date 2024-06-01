@@ -1,4 +1,4 @@
-package com.sistema.notificaciones.backend.Service;
+package com.sistema.notificaciones.backend.Auth;
 
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -6,13 +6,11 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
 
+
 import com.sistema.notificaciones.backend.JWT.JwtService;
-import com.sistema.notificaciones.backend.Protegidos.Model.Rol;
-import com.sistema.notificaciones.backend.Protegidos.Model.Usuario;
-import com.sistema.notificaciones.backend.Protegidos.Repository.UsuarioRepository;
-import com.sistema.notificaciones.backend.Protegidos.Request.RegistroRequest;
-import com.sistema.notificaciones.backend.Request.LoginRequest;
-import com.sistema.notificaciones.backend.Response.AuthResponse;
+import com.sistema.notificaciones.backend.Usuario.Rol;
+import com.sistema.notificaciones.backend.Usuario.Usuario;
+import com.sistema.notificaciones.backend.Usuario.UsuarioRepository;
 
 import lombok.RequiredArgsConstructor;
 

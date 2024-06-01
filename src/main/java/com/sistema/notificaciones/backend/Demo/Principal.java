@@ -1,14 +1,19 @@
-package com.sistema.notificaciones.backend.Protegidos.Controller;
+package com.sistema.notificaciones.backend.Demo;
+
+import java.util.List;
 
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.sistema.notificaciones.backend.Protegidos.Request.RegistroRequest;
-import com.sistema.notificaciones.backend.Response.AuthResponse;
-import com.sistema.notificaciones.backend.Service.AuthService;
+import com.sistema.notificaciones.backend.Auth.AuthResponse;
+import com.sistema.notificaciones.backend.Auth.AuthService;
+import com.sistema.notificaciones.backend.Auth.RegistroRequest;
+import com.sistema.notificaciones.backend.Modulo.Modulo;
+import com.sistema.notificaciones.backend.Modulo.ModuloService;
 
 import lombok.RequiredArgsConstructor;
 
@@ -17,6 +22,7 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class Principal {
     private final AuthService authService;
+    private final ModuloService moduloService;
 
     @PostMapping(value="principal")
     public String bienvenida() {
@@ -28,4 +34,8 @@ public class Principal {
         return ResponseEntity.ok(authService.register(request));
     }
 
+    @GetMapping(value="modulos")
+    public List<Modulo> getModulosActivos() {
+        return moduloService.obtenerModulosActivos();
+    }
 }

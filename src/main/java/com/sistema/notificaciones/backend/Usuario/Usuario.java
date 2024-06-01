@@ -1,4 +1,4 @@
-package com.sistema.notificaciones.backend.Protegidos.Model;
+package com.sistema.notificaciones.backend.Usuario;
 
 import java.util.Collection;
 import java.util.List;

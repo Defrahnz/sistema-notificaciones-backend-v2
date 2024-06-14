@@ -7,6 +7,7 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
+import jakarta.persistence.Basic;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -29,28 +30,29 @@ public class Usuario implements UserDetails{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Integer id;
+    @Basic
     @Column(nullable = false)
     String nombre;
     @Column(name="apellidop",nullable = false)
-    String apellidoP;
+    String apellidop;
     @Column(name="apellidom")
-    String apellidoM;
+    String apellidom;
     @Column(nullable = false)
     String calle;
     @Column(name="numerointerior")
-    String numInt;
+    String numinterior;
     @Column(name="numeroexterior",nullable = false)
-    String numExt;
+    String numexterior;
     @Column(name="codigopostal",nullable = false)
-    String codigoPostal;
+    String codigopostal;
     @Column(nullable = false)
     String colonia;
     @Column(nullable = false)
     String ciudad;
     @Column(name="telefonocasa",nullable = false)
-    String telefonoCasa;
+    String telefonocasa;
     @Column(name="telefonomovil",nullable = false)
-    String telefonoMovil;
+    String telefonomovil;
     @Column(nullable = false)
     String username;
     String password;

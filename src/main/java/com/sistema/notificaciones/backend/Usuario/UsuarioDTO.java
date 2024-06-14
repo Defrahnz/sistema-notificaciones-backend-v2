@@ -12,15 +12,15 @@ import lombok.NoArgsConstructor;
 public class UsuarioDTO {
     Integer id;
     String nombre;
-    String apellidoP;
-    String apellidoM;
+    String apellidop;
+    String apellidom;
     String calle;
-    String numInt;
-    String numExt;
-    String codigoPostal;
+    String numinterior;
+    String numexterior;
+    String codigopostal;
     String colonia;
     String ciudad;
-    String telefonoCasa;
-    String telefonoMovil;
+    String telefonocasa;
+    String telefonomovil;
     String username;
 }

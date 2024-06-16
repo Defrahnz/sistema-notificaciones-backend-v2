@@ -18,7 +18,7 @@ public class ModuloController {
     private final ModuloService moduloService;
 
     @GetMapping(value="/activos")
-    public List<Modulo> obtenerModulosActivos(){
+    public List<ModuloDTO> obtenerModulosActivos(){
         return moduloService.obtenerModulosActivos();
     }
     

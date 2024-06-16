@@ -15,10 +15,12 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
+@Builder
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
@@ -35,8 +37,9 @@ public class Modulo {
     private Modulo moduloPadre;
     @OneToMany(mappedBy="moduloPadre",fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private List<Modulo> modulosHijos=new ArrayList<>();
-    @Column(unique = true)
-    private String nombre;
+    @Column(unique = true, name="nombre")
+    private String nombreModulo;
+    private String url;
     private String descripcion;
     @Column(name="url_imagen")
     private String urlImagen;

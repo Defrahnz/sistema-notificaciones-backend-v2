@@ -12,8 +12,8 @@ public interface UsuarioRepository extends JpaRepository<Usuario,Integer> {
     @Modifying
     @Query("update Usuario u set u.nombre=:nombre, u.apellidop=:apellidop, u.apellidom=:apellidom, " +
            "u.calle=:calle, u.numinterior=:numinterior, u.numexterior=:numexterior, u.codigopostal=:codigopostal, " +
-           "u.colonia=:colonia, u.ciudad=:ciudad, u.telefonocasa=:telefonocasa, u.telefonomovil=:telefonomovil, " +
-           "u.username=:username where u.id = :id")
+           "u.colonia=:colonia, u.ciudad=:ciudad, u.telefonocasa=:telefonocasa, u.telefonomovil=:telefonomovil " +
+           "where u.id = :id")
     void updateUsuario(@Param("id") Integer id, 
                        @Param("nombre") String nombre, 
                        @Param("apellidop") String apellidop, 
@@ -25,7 +25,6 @@ public interface UsuarioRepository extends JpaRepository<Usuario,Integer> {
                        @Param("colonia") String colonia, 
                        @Param("ciudad") String ciudad, 
                        @Param("telefonocasa") String telefonocasa, 
-                       @Param("telefonomovil") String telefonomovil, 
-                       @Param("username") String username);
+                       @Param("telefonomovil") String telefonomovil);
 
 }

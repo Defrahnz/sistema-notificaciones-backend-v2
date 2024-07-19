@@ -25,15 +25,13 @@ public class UsuarioService {
             .ciudad(usuarioRequest.getCiudad())
             .telefonocasa(usuarioRequest.getTelefonocasa())
             .telefonomovil(usuarioRequest.getTelefonomovil())
-            .username(usuarioRequest.getUsername())
-            .rol(Rol.USER) // Ajustar según el rol necesario
+            //.rol(Rol.USER) // Ajustar según el rol necesario
             .build();
         
         usuarioRepository.updateUsuario(
             usuario.getId(), usuario.getNombre(), usuario.getApellidop(), usuario.getApellidom(),
             usuario.getCalle(), usuario.getNuminterior(), usuario.getNumexterior(), usuario.getCodigopostal(),
-            usuario.getColonia(), usuario.getCiudad(), usuario.getTelefonocasa(), usuario.getTelefonomovil(), usuario.getUsername()
-        );
+            usuario.getColonia(), usuario.getCiudad(), usuario.getTelefonocasa(), usuario.getTelefonomovil());
 
         return new UsuarioResponse("El usuario se actualizó satisfactoriamente");
     }
